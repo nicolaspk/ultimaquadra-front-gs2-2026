@@ -21,7 +21,7 @@ export default function Integrantes() {
       <section className="bg-[#f7f8f5] py-14 sm:py-18">
         <Container>
           <h2 className="mb-8 text-center text-3xl font-extrabold text-[#0b2b3d]">Equipe de desenvolvimento</h2>
-          <div className="grid gap-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {integrantes.map((integrante) => (
               <article key={integrante.rm} className="flex min-w-0 flex-col items-center rounded-[1.6rem] border border-[#d8e4e1] bg-white p-6 shadow-[0_15px_30px_-25px_#0b2b3d]">
                 {integrante.foto ? <img src={integrante.foto} alt={`Foto de ${integrante.nome}`} className="size-26 rounded-2xl object-cover" loading="lazy" /> : null}
