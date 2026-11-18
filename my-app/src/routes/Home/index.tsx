@@ -67,6 +67,19 @@ export default function Home() {
           </aside>
         </Container>
       </section>
+
+      <section id="proposta" aria-labelledby="titulo-proposta" className="border-y border-[#dce8e1] bg-[#fffaf6] py-16 sm:py-20">
+        <Container className="grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:gap-16">
+          <div>
+            <p className="text-sm font-bold tracking-[0.14em] text-[#0c7771] uppercase">A proposta</p>
+            <h2 id="titulo-proposta" className="mt-3 text-3xl leading-tight font-bold tracking-tight text-[#0b2b3d] sm:text-4xl">Acessibilidade começa antes da entrada.</h2>
+          </div>
+          <div className="space-y-4 text-base leading-8 text-[#3d5e55] sm:text-lg">
+            <p>Buracos, desníveis, passagens estreitas e pavimentação irregular podem comprometer a chegada de pessoas com deficiência, idosos e cidadãos com mobilidade reduzida.</p>
+            <p>O ÚltimaQuadra reúne informações sobre unidades, trechos e ocorrências em uma interface clara, conectando participação comunitária, acessibilidade e tecnologia.</p>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }
