@@ -24,7 +24,7 @@ export default function Integrantes() {
           <div className="grid gap-5">
             {integrantes.map((integrante) => (
               <article key={integrante.rm} className="flex min-w-0 flex-col items-center rounded-[1.6rem] border border-[#d8e4e1] bg-white p-6 shadow-[0_15px_30px_-25px_#0b2b3d]">
-                <span className="flex size-24 items-center justify-center rounded-2xl bg-[#dff1e7] text-2xl font-black text-[#0b2b3d]">{integrante.iniciais}</span>
+                {integrante.foto ? <img src={integrante.foto} alt={`Foto de ${integrante.nome}`} className="size-26 rounded-2xl object-cover" loading="lazy" /> : null}
                 <h3 className="mt-5 text-center text-xl font-extrabold text-[#0b2b3d]">{integrante.nome}</h3>
                 <p className="mt-3 text-sm text-[#496666]">RM {integrante.rm} · {integrante.turma}</p>
                 
