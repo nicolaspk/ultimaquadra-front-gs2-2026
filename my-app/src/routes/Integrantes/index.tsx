@@ -27,7 +27,10 @@ export default function Integrantes() {
                 {integrante.foto ? <img src={integrante.foto} alt={`Foto de ${integrante.nome}`} className="size-26 rounded-2xl object-cover" loading="lazy" /> : null}
                 <h3 className="mt-5 text-center text-xl font-extrabold text-[#0b2b3d]">{integrante.nome}</h3>
                 <p className="mt-3 text-sm text-[#496666]">RM {integrante.rm} · {integrante.turma}</p>
-                
+                <div className="mt-5 grid grid-cols-2 gap-3">
+            <a href={integrante.github} target="_blank" rel="noopener noreferrer" className="botao-primario rounded-xl p-3 text-center text-sm font-bold">GitHub</a>
+            <a href={integrante.linkedin} target="_blank" rel="noopener noreferrer" className="botao-secundario rounded-xl p-3 text-center text-sm font-bold">LinkedIn</a>
+          </div>
               </article>
             ))}
           </div>
