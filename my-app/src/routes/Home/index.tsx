@@ -19,6 +19,12 @@ const etapas = [
   },
 ] as const;
 
+const destaques = [
+  'Identificação de unidades e trechos de acesso',
+  'Busca de relatos por unidade, categoria e situação',
+  'Informação contextualizada por trecho de acesso',
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -54,6 +60,19 @@ export default function Home() {
               Prefere começar pela UBS? Ver unidades cadastradas
               <span aria-hidden="true">→</span>
             </Link>
+
+            <ul className="mt-8 space-y-3">
+              {destaques.map((destaque) => (
+                <li key={destaque} className="flex items-start gap-3 text-sm leading-7 text-[#3d5e55] sm:text-base">
+                  <span className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-[#dff1e7] text-[#0c7771]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="size-4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m5 13 4 4L19 7" />
+                    </svg>
+                  </span>
+                  {destaque}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <aside aria-label="Relação entre unidade de saúde, trecho e ocorrência" className="padrao-calcada relative min-w-0 overflow-hidden rounded-[2rem] border-t-8 border-[#ff8b63] bg-[#0b2b3d] p-5 text-white shadow-[0_24px_70px_-40px_#0b2b3d] sm:p-8">
