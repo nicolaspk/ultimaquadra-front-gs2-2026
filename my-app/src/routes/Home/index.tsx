@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <section aria-labelledby="titulo-home" className="padrao-piso overflow-hidden bg-gradient-to-br from-[#fff8f3] via-[#f7f8f5] to-[#eaf4f1] py-16 sm:py-20 lg:py-28">
-        <Container className="max-w-4xl">
+        <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#f3bd9f] bg-[#fff0e7] px-4 py-2 text-xs font-bold tracking-[0.09em] text-[#97472f] uppercase sm:text-sm">
               <span aria-hidden="true" className="size-2 rounded-full bg-[#e77852]" />
@@ -37,6 +37,34 @@ export default function Home() {
               <span aria-hidden="true">→</span>
             </Link>
           </div>
+
+          <aside aria-label="Relação entre unidade de saúde, trecho e ocorrência" className="padrao-calcada relative min-w-0 overflow-hidden rounded-[2rem] border-t-8 border-[#ff8b63] bg-[#0b2b3d] p-5 text-white shadow-[0_24px_70px_-40px_#0b2b3d] sm:p-8">
+
+            <div className="relative">
+              <div className="flex items-center gap-4 border-b border-white/20 pb-5">
+                <span className="inline-flex size-15 items-center justify-center rounded-2xl bg-white ring-1 ring-white/15">
+                  <img src="/assets/logo-ultimaquadra.png" alt="" width="42" height="42" className="size-13 object-contain" />
+                </span>
+                <span className="text-xs font-bold tracking-[0.13em] text-[#ffb99c] uppercase">Estrutura central do projeto</span>
+              </div>
+              <div className="mt-6 space-y-3">
+                <div className="rounded-2xl border border-[#357f84] bg-[#164355] p-5">
+                  <p className="text-xs font-bold tracking-wider text-[#c2f1e7] uppercase">Unidade de saúde</p>
+                  <p className="mt-2 text-lg font-bold">Onde o cidadão precisa chegar</p>
+                </div>
+                <div aria-hidden="true" className="mx-auto h-7 w-1 rounded-full bg-[#ff8b63]" />
+                <div className="rounded-2xl border border-[#357f84] bg-[#164355] p-5">
+                  <p className="text-xs font-bold tracking-wider text-[#c2f1e7] uppercase">Trecho de acesso</p>
+                  <p className="mt-2 text-lg font-bold">Por onde a pessoa passa</p>
+                </div>
+                <div aria-hidden="true" className="mx-auto h-7 w-1 rounded-full bg-[#ff8b63]" />
+                <div className="rounded-2xl border border-[#ff8b63] bg-[#1b6170] p-5">
+                  <p className="text-xs font-bold tracking-wider text-[#ffb99c] uppercase">Ocorrência</p>
+                  <p className="mt-2 text-lg font-bold">O obstáculo que foi relatado</p>
+                </div>
+              </div>
+            </div>
+          </aside>
         </Container>
       </section>
     </>
