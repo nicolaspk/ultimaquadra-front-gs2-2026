@@ -1,6 +1,24 @@
 import { Link } from 'react-router-dom';
 import Container from '../../components/Container/Container';
 
+const etapas = [
+  {
+    numero: '01',
+    titulo: 'Consulte os relatos',
+    descricao: 'Pesquise as ocorrências por UBS, tipo de obstáculo ou situação.',
+  },
+  {
+    numero: '02',
+    titulo: 'Entenda o local',
+    descricao: 'Veja a descrição, a data e o trecho de acesso relacionado ao registro.',
+  },
+  {
+    numero: '03',
+    titulo: 'Contribua com um relato',
+    descricao: 'Informe uma barreira observada para ajudar a tornar o problema mais visível.',
+  },
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -77,6 +95,22 @@ export default function Home() {
           <div className="space-y-4 text-base leading-8 text-[#3d5e55] sm:text-lg">
             <p>Buracos, desníveis, passagens estreitas e pavimentação irregular podem comprometer a chegada de pessoas com deficiência, idosos e cidadãos com mobilidade reduzida.</p>
             <p>O ÚltimaQuadra reúne informações sobre unidades, trechos e ocorrências em uma interface clara, conectando participação comunitária, acessibilidade e tecnologia.</p>
+          </div>
+        </Container>
+      </section>
+
+      <section id="como-funciona" aria-labelledby="titulo-como-funciona" className="scroll-mt-8 py-16 sm:py-20">
+        <Container>
+          <p className="text-sm font-bold tracking-[0.14em] text-[#0c7771] uppercase">Como funciona</p>
+          <h2 id="titulo-como-funciona" className="mt-3 max-w-2xl text-3xl leading-tight font-bold tracking-tight text-[#0b2b3d] sm:text-4xl">Três passos para tornar obstáculos mais visíveis.</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {etapas.map((etapa) => (
+              <article key={etapa.numero} className="rounded-2xl border border-[#dce8e1] border-t-4 border-t-[#ff8b63] bg-white p-7 shadow-[0_10px_24px_-22px_#0b2b3d]">
+                <span className="text-sm font-extrabold tracking-[0.1em] text-[#0c8b82]">{etapa.numero}</span>
+                <h3 className="mt-5 text-xl font-bold tracking-tight text-[#0b2b3d]">{etapa.titulo}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#47675d] sm:text-base">{etapa.descricao}</p>
+              </article>
+            ))}
           </div>
         </Container>
       </section>
