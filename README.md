@@ -4,6 +4,15 @@ Global Solution CitizenTech 2026/2 · Front-End Design Engineering · FIAP.
 
 O ÚltimaQuadra organiza relatos sobre obstáculos físicos nos trechos de calçada de acesso a Unidades Básicas de Saúde. A plataforma apresenta UBS cadastradas, seus trechos e ocorrências relacionadas, permite enviar um relato, obter confirmação e consultá-lo posteriormente.
 
+## Links do projeto
+
+- **Aplicação (Vercel):** https://ultimaquadra-front-gs2-2026.vercel.app
+- **Repositório do Front-End (GitHub):** https://github.com/nicolaspk/ultimaquadra-front-gs2-2026
+- **API REST Java:** https://ultimaquadra-gs2.onrender.com
+- **Repositório da API Java:** https://github.com/nicolaspk/ultimaquadra-gs2
+- **Vídeo de demonstração (YouTube):** **pendente de publicação** — adicionar o link público ou não listado, com duração máxima de 3 minutos.
+- **Contato acadêmico:** [GitHub do representante](https://github.com/nicolaspk) e [perfis da equipe](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes). A página `/contato` é demonstrativa e não envia mensagens.
+
 ## Tecnologias
 
 React, Vite, TypeScript, Tailwind CSS 4, React Router DOM e Fetch API nativa (sem Axios). A organização segue as aulas, com páginas em `routes`, componentes em `components`, tipos em `types` e requisições em `services`.
@@ -13,10 +22,13 @@ React, Vite, TypeScript, Tailwind CSS 4, React Router DOM e Fetch API nativa (se
 Pré-requisitos: Node.js compatível com a versão do Vite e npm.
 
 ```bash
-cd my-app
-npm install
+git clone https://github.com/nicolaspk/ultimaquadra-front-gs2-2026.git
+cd ultimaquadra-front-gs2-2026/my-app
+npm ci
 npm run dev
 ```
+
+Se preferir instalar as dependências sem usar o lockfile estritamente, `npm install` também é suportado.
 
 Acesse a URL exibida pelo Vite (normalmente `http://localhost:5173/`). Para verificar compilação e pré-visualização:
 
@@ -51,7 +63,7 @@ O menu apresenta primeiro as páginas de contextualização (`Início`, `Sobre`,
 
 A aplicação vem configurada para usar **somente a API Java** em `https://ultimaquadra-gs2.onrender.com` (sem `VITE_DATA_SOURCE=local`). As operações são feitas com `fetch` nativo e **não** misturam resultados remotos com dados locais. Os nomes e endereços exibidos em modo API são os que o Java devolve; a presença das sete UBS depende de executar o SQL do projeto Java no Oracle do Render.
 
-A implantação na Vercel deve ter `VITE_DATA_SOURCE=api` e `VITE_API_URL=https://ultimaquadra-gs2.onrender.com` nas Environment Variables. Se existir um `.env.local` antigo contendo `VITE_DATA_SOURCE=local`, atualize-o ou remova-o antes dos testes de integração. Modificações nas variáveis de ambiente exigem novo build/deploy.
+O modo API e o endereço remoto acima já são valores padrão do código. Portanto, **não é obrigatório configurar variáveis na Vercel** para usar esses valores. Opcionalmente, podem ser definidos `VITE_DATA_SOURCE=api` e `VITE_API_URL=https://ultimaquadra-gs2.onrender.com` para explicitá-los. Se existir um `.env.local` antigo com `VITE_DATA_SOURCE=local`, atualize-o ou remova-o antes dos testes. Alterações nas variáveis de ambiente exigem novo build/deploy.
 
 **Modo local opcional para desenvolvimento isolado:** ao definir expressamente `VITE_DATA_SOURCE=local`, o navegador usa as sete UBS cadastradas em `src/data/base.ts` e salva ocorrências apenas em `localStorage`. Este modo **não equivale à integração** e **não oferece a exclusão no Oracle**. O modo API é o padrão; falhas de GET não acionam fallback para dados locais.
 
@@ -119,7 +131,7 @@ VITE_API_TRECHOS_PATH=/api/trechos
 VITE_API_OCORRENCIAS_PATH=/api/ocorrencias
 ```
 
-O CORS na versão Java analisada (`config/WebConfig.java`) declara `GET`, `POST`, `PUT`, `DELETE` e `OPTIONS`, permite `Content-Type`/`Accept` e expõe `Location`. **O código é compatível com o preflight**, mas a resposta HTTP real no Render e o funcionamento no navegador ainda precisam de verificação.
+O CORS na versão Java analisada (`config/WebConfig.java`) declara `GET`, `POST`, `PUT`, `DELETE` e `OPTIONS`, permite `Content-Type`/`Accept` e expõe `Location`. A integração foi testada pela equipe com a API Java e o banco Oracle; a disponibilidade dos serviços deve ser novamente conferida durante a avaliação.
 
 ### Teste ponta a ponta (somente com dados controlados)
 
@@ -130,12 +142,12 @@ O CORS na versão Java analisada (`config/WebConfig.java`) declara `GET`, `POST`
 5. Atualize a lista por GET e confirme que o ID foi removido; novo GET do ID deve retornar 404.
 6. Teste erros 404, 409, 500, falha de rede e CORS no navegador. Nunca exclua relatos legítimos ou associe obstáculos fictícios a UBS reais na base pública.
 
-Não confunda testes simulados de `fetch` com testes efetivos contra o Render ou Oracle. A integração remota só estará aprovada após executar esse roteiro com os serviços disponíveis.
+Segundo os testes de integração realizados pela equipe, as operações GET, POST e DELETE com a API Java e o banco Oracle foram concluídas com sucesso. Esses testes devem ser reproduzidos com registros controlados quando necessário; simulações de `fetch` não substituem testes reais.
 
 ## Estrutura
 
 ```text
-ultimaquadra/
+ultimaquadra-front-gs2-2026/
 ├── README.md
 └── my-app/
     ├── .env.example
@@ -163,25 +175,39 @@ Projeto adaptado para mobile (390 × 844), tablet (768 × 1024) e desktop (1440 
 
 ## Integrantes
 
-| Integrante | RM | Turma |
-| --- | --- | --- |
-| Maria Eduarda Escandor | 568216 | 1TDSPO |
-| Erick Menezes | 570325 | 1TDSPF |
-| Maria Eduarda Lopes de Lima | 572425 | 1TDSPO |
-| Matheus Yudi | 571245 | 1TDSPF |
-| Nicolas Sousa | 574141 | 1TDSPH |
+| Integrante | RM | Turma | GitHub |
+| --- | --- | --- | --- |
+| Maria Eduarda Escandor | 568216 | 1TDSPO | [mariabatistaescandor-gif](https://github.com/mariabatistaescandor-gif) |
+| Erick Menezes | 570325 | 1TDSPF | [DevErick-658](https://github.com/DevErick-658) |
+| Maria Eduarda Lopes de Lima | 572425 | 1TDSPO | [mariaeduardaalima](https://github.com/mariaeduardaalima) |
+| Matheus Yudi | 571245 | 1TDSPF | [ogmatheus7](https://github.com/ogmatheus7) |
+| Nicolas Sousa | 574141 | 1TDSPH | [nicolaspk](https://github.com/nicolaspk) |
 
-Os nomes, RMs, turmas e links da página foram reaproveitados como **informações da equipe** do repositório ECOUP; confirmar a composição desta GS. As cinco fotografias estão em `my-app/public/assets/equipe/`, reaproveitadas dos arquivos do projeto ECOUP fornecidos como referência. Para substituí-las pelas fotos finais, mantenha os mesmos nomes de arquivo, extensões e caminhos. Confirmar a composição desta GS antes da entrega.
+Os dados e perfis da equipe constam da página `/integrantes`. As fotografias de identificação foram reaproveitadas de materiais acadêmicos anteriores da própria equipe (ECOUP) e estão em `my-app/public/assets/equipe/`.
 
-## Publicação e entregáveis
+## Publicação e entrega
 
-- **GitHub do Front-End:** adicionar URL definitiva.
-- **Vercel:** adicionar URL definitiva. Configurar Root Directory = `my-app`, Framework Preset = Vite; o `vercel.json` contém rewrite para navegação SPA.
-- **API Java remota:** https://ultimaquadra-gs2.onrender.com — validação de GET/POST/DELETE no ambiente publicado pendente.
-- **Vídeo YouTube (máximo 3 minutos):** adicionar URL pública ou não listada.
-- **Contato:** a página `/contato` valida o preenchimento no navegador, mas **não envia ou armazena mensagens**; os links públicos de GitHub/LinkedIn estão na página `/integrantes`.
+- **Repositório público (Front-End):** https://github.com/nicolaspk/ultimaquadra-front-gs2-2026
+- **Aplicação Vercel:** https://ultimaquadra-front-gs2-2026.vercel.app
+- **API Java remota:** https://ultimaquadra-gs2.onrender.com
+- **Repositório do Java:** https://github.com/nicolaspk/ultimaquadra-gs2
+- **YouTube:** **link pendente** até a publicação do vídeo demonstrativo (público ou não listado, **até 3 minutos**).
+- **Contato:** [perfil do responsável no GitHub](https://github.com/nicolaspk), [perfis profissionais da equipe](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes) na aplicação e página `/contato`. O formulário de contato valida o preenchimento localmente, mas **não envia nem armazena mensagens**.
 
-O repositório deve ser público com, no mínimo, cinco commits de cada integrante e quinze no total. A entrega é um ZIP de até 50 MB enviado pelo representante no Portal do Aluno, **sem `node_modules`**.
+### Configuração na Vercel
+
+- Repositório: `nicolaspk/ultimaquadra-front-gs2-2026`, branch de produção `main`.
+- Root Directory: `my-app`.
+- Application Preset: Vite; comando de build `npm run build`; saída `dist`.
+- O arquivo `my-app/vercel.json` contém a regra de rewrite para suportar acesso direto às rotas da SPA.
+- A API Java é o modo padrão; variáveis de ambiente são opcionais enquanto forem mantidos os valores do código.
+
+### Entrega acadêmica
+
+- Histórico do GitHub: **mínimo de cinco commits individuais por integrante e quinze no total**, com participação dos cinco integrantes registrada no repositório.
+- Arquivo obrigatório: **um ZIP de até 50 MB**, contendo código-fonte, `README.md`, configurações e assets, **sem `node_modules` ou `dist`**.
+- Envio exclusivamente pelo representante no **Portal do Aluno** da disciplina, dentro do prazo oficial.
+- A apresentação presencial é separada do vídeo YouTube e requer participação de todos os integrantes.
 
 ## Uso de inteligência artificial
 
