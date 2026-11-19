@@ -25,7 +25,7 @@
 | **Repositório Front-End** | [nicolaspk/ultimaquadra-front-gs2-2026](https://github.com/nicolaspk/ultimaquadra-front-gs2-2026) |
 | **API REST Java** | [ultimaquadra-gs2.onrender.com](https://ultimaquadra-gs2.onrender.com) |
 | **Repositório Back-End** | [nicolaspk/ultimaquadra-gs2](https://github.com/nicolaspk/ultimaquadra-gs2) |
-| **Vídeo no YouTube** | **Pendente de publicação** — até 3 minutos, público ou não listado |
+| **Vídeo no YouTube** | [Assistir à demonstração do ÚltimaQuadra](https://youtu.be/GR8M_E6swSU) |
 | **Contato acadêmico** | [GitHub do representante](https://github.com/nicolaspk) · [Equipe e perfis](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes) |
 
 ---
