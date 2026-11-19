@@ -1,21 +1,126 @@
-# ÚltimaQuadra — Acessibilidade começa antes da porta
+<p align="center"><img src="./my-app/public/assets/logo-ultimaquadra.png" alt="Logotipo ÚltimaQuadra" width="112"></p>
+<h1 align="center">ÚltimaQuadra</h1>
+<p align="center"><strong>Acessibilidade começa antes da porta.</strong><br>Global Solution 2026/2 · CitizenTech · FIAP · Front-End Design Engineering</p>
+<p align="center">
+<img src="https://img.shields.io/badge/React-19-0B2B3D?style=flat-square&logo=react&logoColor=white" alt="React 19">
+<img src="https://img.shields.io/badge/Vite-8-0B2B3D?style=flat-square&logo=vite&logoColor=white" alt="Vite 8">
+<img src="https://img.shields.io/badge/TypeScript-6-0B2B3D?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 6">
+<img src="https://img.shields.io/badge/Tailwind_CSS-4-087F78?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4">
+</p>
+<p align="center"><a href="https://ultimaquadra-front-gs2-2026.vercel.app"><strong>Acessar a aplicação</strong></a> &nbsp;·&nbsp; <a href="https://github.com/nicolaspk/ultimaquadra-front-gs2-2026">GitHub</a> &nbsp;·&nbsp; <a href="https://ultimaquadra-gs2.onrender.com">API Java</a></p>
 
-Global Solution CitizenTech 2026/2 · Front-End Design Engineering · FIAP.
+---
 
-O ÚltimaQuadra organiza relatos sobre obstáculos físicos nos trechos de calçada de acesso a Unidades Básicas de Saúde. A plataforma apresenta UBS cadastradas, seus trechos e ocorrências relacionadas, permite enviar um relato, obter confirmação e consultá-lo posteriormente.
+> **O caminho também faz parte do cuidado.** O ÚltimaQuadra organiza informações sobre obstáculos físicos nos trajetos de acesso a Unidades Básicas de Saúde, permitindo consultar UBS, registrar ocorrências e acompanhar relatos. O objetivo é dar visibilidade ao trecho que antecede a porta da unidade.
 
-## Links do projeto
+**Navegação:** [Funcionalidades](#funcionalidades) · [Equipe](#equipe) · [Tecnologias](#tecnologias) · [Páginas](#páginas-e-rotas) · [Execução](#como-executar) · [API](#integração-java-e-oracle) · [Entrega](#publicação-e-entrega)
 
-- **Aplicação (Vercel):** https://ultimaquadra-front-gs2-2026.vercel.app
-- **Repositório do Front-End (GitHub):** https://github.com/nicolaspk/ultimaquadra-front-gs2-2026
-- **API REST Java:** https://ultimaquadra-gs2.onrender.com
-- **Repositório da API Java:** https://github.com/nicolaspk/ultimaquadra-gs2
-- **Vídeo de demonstração (YouTube):** **pendente de publicação** — adicionar o link público ou não listado, com duração máxima de 3 minutos.
-- **Contato acadêmico:** [GitHub do representante](https://github.com/nicolaspk) e [perfis da equipe](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes). A página `/contato` é demonstrativa e não envia mensagens.
+---
+
+## Links essenciais
+
+| Recurso | Acesso |
+| :--- | :--- |
+| **Aplicação na Vercel** | [Abrir ÚltimaQuadra](https://ultimaquadra-front-gs2-2026.vercel.app) |
+| **Repositório Front-End** | [nicolaspk/ultimaquadra-front-gs2-2026](https://github.com/nicolaspk/ultimaquadra-front-gs2-2026) |
+| **API REST Java** | [ultimaquadra-gs2.onrender.com](https://ultimaquadra-gs2.onrender.com) |
+| **Repositório Back-End** | [nicolaspk/ultimaquadra-gs2](https://github.com/nicolaspk/ultimaquadra-gs2) |
+| **Vídeo no YouTube** | **Pendente de publicação** — até 3 minutos, público ou não listado |
+| **Contato acadêmico** | [GitHub do representante](https://github.com/nicolaspk) · [Equipe e perfis](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes) |
+
+---
+
+## Funcionalidades
+
+| Consulta | Participação |
+| :--- | :--- |
+| **UBS cadastradas:** pesquisa por nome ou bairro e consulta dos trechos de acesso. | **Registro:** formulário com validação, revisão e envio pela API. |
+| **Ocorrências:** busca, filtros por UBS, categoria e situação, além de ordenação. | **Confirmação:** identificador do novo relato e consulta posterior. |
+| **Detalhes:** contexto, localização informada, data e situação do relato. | **Exclusão:** confirmação explícita e operação DELETE seguida de atualização da lista. |
+
+A interface apresenta estados de **carregamento**, **erro** e **ausência de resultados**, sem tratar falhas da API como sucesso.
+
+---
+
+## Equipe
+
+Cinco integrantes responsáveis pela implementação e integração do ÚltimaQuadra na Global Solution 2026/2.
+
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://github.com/mariabatistaescandor-gif"><img src="./my-app/public/assets/equipe/foto-maria1.jpeg" width="110" alt="Foto de Maria Eduarda Escandor"></a><br>
+      <strong>Maria Eduarda Escandor</strong><br>
+      <sub>RM 568216 · 1TDSPO</sub><br>
+      <a href="https://github.com/mariabatistaescandor-gif">GitHub</a> · <a href="https://www.linkedin.com/in/maria-eduarda-escandor-5b1587359/">LinkedIn</a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/DevErick-658"><img src="./my-app/public/assets/equipe/foto-erick.jpeg" width="110" alt="Foto de Erick Menezes"></a><br>
+      <strong>Erick Menezes</strong><br>
+      <sub>RM 570325 · 1TDSPF</sub><br>
+      <a href="https://github.com/DevErick-658">GitHub</a> · <a href="https://www.linkedin.com/in/erick-menezes-b53009232/">LinkedIn</a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/mariaeduardaalima"><img src="./my-app/public/assets/equipe/foto-maria2.png" width="110" alt="Foto de Maria Eduarda Lopes de Lima"></a><br>
+      <strong>Maria Eduarda Lopes de Lima</strong><br>
+      <sub>RM 572425 · 1TDSPO</sub><br>
+      <a href="https://github.com/mariaeduardaalima">GitHub</a> · <a href="https://www.linkedin.com/in/maria-eduarda-lopes-de-lima-1291b6289/">LinkedIn</a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/ogmatheus7"><img src="./my-app/public/assets/equipe/matheus.png" width="110" alt="Foto de Matheus Yudi"></a><br>
+      <strong>Matheus Yudi</strong><br>
+      <sub>RM 571245 · 1TDSPF</sub><br>
+      <a href="https://github.com/ogmatheus7">GitHub</a> · <a href="https://www.linkedin.com/in/matheus-yudi7/">LinkedIn</a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/nicolaspk"><img src="./my-app/public/assets/equipe/foto-nicolas.jpg" width="110" alt="Foto de Nicolas Sousa"></a><br>
+      <strong>Nicolas Sousa</strong><br>
+      <sub>RM 574141 · 1TDSPH</sub><br>
+      <a href="https://github.com/nicolaspk">GitHub</a> · <a href="https://www.linkedin.com/in/nicolas-sousaa/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+
+<sub>As fotografias estão no próprio repositório em <code>my-app/public/assets/equipe/</code> e foram reaproveitadas de materiais acadêmicos anteriores da equipe.</sub>
+
+---
 
 ## Tecnologias
 
-React, Vite, TypeScript, Tailwind CSS 4, React Router DOM e Fetch API nativa (sem Axios). A organização segue as aulas, com páginas em `routes`, componentes em `components`, tipos em `types` e requisições em `services`.
+| Área | Implementação |
+| :--- | :--- |
+| **Front-End** | React 19, Vite 8, TypeScript 6 e Tailwind CSS 4 |
+| **Navegação** | React Router DOM, rotas estáticas e com parâmetros |
+| **HTTP** | Fetch API nativa, sem Axios |
+| **Back-End e dados** | API REST Java e banco Oracle |
+| **Hospedagem** | Vercel para o Front-End e URL remota da API Java |
+
+Páginas, componentes reutilizáveis, serviços e tipos são organizados em diretórios separados.
+
+---
+
+## Páginas e rotas
+
+| Rota | Função |
+| --- | --- |
+| `/` | Home, proposta do ÚltimaQuadra e acesso aos fluxos principais |
+| `/integrantes` | Identificação dos cinco integrantes e links públicos |
+| `/sobre` | Apresentação aprofundada do problema, proposta, jornada do cidadão, públicos, limites e ODS |
+| `/faq` | Perguntas e respostas |
+| `/contato` | Formulário de contato com validações e feedback demonstrativo (sem envio ou armazenamento) |
+| `/ocorrencias` | Consulta geral com busca, filtros de UBS, categoria, situação e ordenação; combinações compartilháveis pela URL |
+| `/unidades` | Busca de UBS com estados de carregamento, erro e sem resultados |
+| `/unidades/:id` | Trechos de acesso e ocorrências da UBS |
+| `/ocorrencias/:id` | Detalhes e situação de uma ocorrência |
+| `/registrar` | Formulário validado, pré-seleção de UBS/trecho e revisão |
+| `/confirmacao/:id` | Confirmação e acesso ao relato recém-cadastrado |
+| Outros endereços | Página não encontrada |
+
+### Navegação
+
+O menu apresenta primeiro as páginas de contextualização (`Início`, `Sobre`, `FAQ`, `Integrantes`, `Contato`) e depois o acesso às funcionalidades (`Unidades`, `Ocorrências`, `Registrar`). No celular, essas opções são apresentadas em dois grupos.
+
+---
 
 ## Como executar
 
@@ -37,58 +142,38 @@ npm run build
 npm run preview
 ```
 
-## Páginas
+---
 
-| Rota | Função |
-| --- | --- |
-| `/` | Home, proposta do ÚltimaQuadra e acesso aos fluxos principais |
-| `/integrantes` | Identificação dos cinco integrantes e links públicos |
-| `/sobre` | Apresentação aprofundada do problema, proposta, jornada do cidadão, públicos, limites e ODS |
-| `/faq` | Perguntas e respostas |
-| `/contato` | Formulário de contato com validações e feedback demonstrativo (sem envio ou armazenamento) |
-| `/ocorrencias` | Consulta geral com busca, filtros de UBS, categoria, situação e ordenação; combinações compartilháveis pela URL |
-| `/unidades` | Busca de UBS com estados de carregamento, erro e sem resultados |
-| `/unidades/:id` | Trechos de acesso e ocorrências da UBS |
-| `/ocorrencias/:id` | Detalhes e situação de uma ocorrência |
-| `/registrar` | Formulário validado, pré-seleção de UBS/trecho e revisão |
-| `/confirmacao/:id` | Confirmação e acesso ao relato recém-cadastrado |
-| Outros endereços | Página não encontrada |
+## Estrutura do projeto
 
+```text
+ultimaquadra-front-gs2-2026/
+├── README.md
+└── my-app/
+    ├── .env.example
+    ├── public/assets/
+    ├── src/
+    │   ├── components/
+    │   ├── data/
+    │   ├── routes/
+    │   ├── services/
+    │   ├── types/
+    │   ├── App.tsx
+    │   └── main.tsx
+    ├── package.json
+    ├── vite.config.ts
+    └── vercel.json
+```
 
-## Navegação
+---
 
-O menu apresenta primeiro as páginas de contextualização (`Início`, `Sobre`, `FAQ`, `Integrantes`, `Contato`) e depois o acesso às funcionalidades (`Unidades`, `Ocorrências`, `Registrar`). No celular, essas opções são apresentadas em dois grupos.
-
-## Integração padrão: API Java + Oracle
+## Integração Java e Oracle
 
 A aplicação vem configurada para usar **somente a API Java** em `https://ultimaquadra-gs2.onrender.com` (sem `VITE_DATA_SOURCE=local`). As operações são feitas com `fetch` nativo e **não** misturam resultados remotos com dados locais. Os nomes e endereços exibidos em modo API são os que o Java devolve; a presença das sete UBS depende de executar o SQL do projeto Java no Oracle do Render.
 
 O modo API e o endereço remoto acima já são valores padrão do código. Portanto, **não é obrigatório configurar variáveis na Vercel** para usar esses valores. Opcionalmente, podem ser definidos `VITE_DATA_SOURCE=api` e `VITE_API_URL=https://ultimaquadra-gs2.onrender.com` para explicitá-los. Se existir um `.env.local` antigo com `VITE_DATA_SOURCE=local`, atualize-o ou remova-o antes dos testes. Alterações nas variáveis de ambiente exigem novo build/deploy.
 
 **Modo local opcional para desenvolvimento isolado:** ao definir expressamente `VITE_DATA_SOURCE=local`, o navegador usa as sete UBS cadastradas em `src/data/base.ts` e salva ocorrências apenas em `localStorage`. Este modo **não equivale à integração** e **não oferece a exclusão no Oracle**. O modo API é o padrão; falhas de GET não acionam fallback para dados locais.
-
-### Origem das sete UBS reais
-
-Nomes, endereços e CEPs foram conferidos na **Relação dos Estabelecimentos/Serviços da SMS-SP por Subprefeitura — setembro de 2026**, publicada pela Prefeitura de São Paulo. Os identificadores CNES constam da **Portaria SMS nº 609, de 16 de setembro de 2026**:
-
-- Relação municipal (setembro/2026): https://smartsampa.prefeitura.sp.gov.br/documents/d/saude/unid_munic_saude_sub_setembro2026
-- Portaria SMS nº 609/2026 (CNES): https://legislacao.prefeitura.sp.gov.br/portaria-secretaria-municipal-da-saude-sms-609-de-16-de-setembro-de-2026/consolidado
-
-| UBS | Endereço cadastrado | CNES |
-| --- | --- | --- |
-| Bom Retiro — Dr. Octavio Augusto Rodovalho | Rua Tenente Pena, 8 — Bom Retiro | 2029618 |
-| Boracea | Rua Boracea, 270 — Barra Funda | 6048633 |
-| Cambuci | Avenida Lacerda Franco, 791 — Cambuci | 2786834 |
-| Humaitá — Dr. João de Azevedo Lage | Rua Humaitá, 520 — Bela Vista | 2787113 |
-| República — Fernanda Sante Limeira | Rua Líbero Badaró, 282 — Centro | 6090621 |
-| Santa Cecília — Dr. Humberto Pascale | Rua Vitorino Carmilo, 599 — Campos Elíseos | 2752336 |
-| Sé | Rua Frederico Alvarenga, 259 — Sé | 5975220 |
-
-O projeto **não inventa obstáculos em estabelecimentos reais**. As áreas intituladas **“Entorno imediato da UBS — local a indicar”** servem apenas para associar o relato ao entorno do endereço cadastrado. **Não são trechos vistoriados, georreferenciados ou delimitados como partes reais do caminho**. Os identificadores internos dessas áreas foram mantidos para preservar os vínculos dos relatos locais existentes. O formulário exige um **ponto de referência reconhecível**, informado pelo cidadão, enquanto a área não estiver individualizada. A validação mínima exige 15 caracteres e recusa algumas respostas vagas; ela **não verifica geograficamente** a informação fornecida. Trechos futuros somente devem ser individualizados após confirmação de suas referências. Até ocorrer o primeiro relato, as UBS e a página de ocorrências mostram estado vazio.
-
-Os testes realizados com a versão anterior (UBS fictícias) permanecem na chave antiga `ultimaquadra:ocorrencias:v1` do navegador. A versão atual usa `ultimaquadra:ocorrencias:v2` para evitar que relatos antigos sejam associados incorretamente às UBS reais. Esses registros antigos **não são apagados**, mas não aparecem na consulta atual.
-
-## Contrato Java confirmado nos arquivos da API
 
 ### Endpoints utilizados pelo React
 
@@ -102,6 +187,9 @@ Os testes realizados com a versão anterior (UBS fictícias) permanecem na chave
 | DELETE | `/api/ocorrencias/{id}` | Exclusão permanente (esperado HTTP **204**) |
 
 O Java também oferece outros métodos CRUD para unidades, trechos e ocorrências. O Front-End **não** inclui controles de exclusão de UBS ou trechos.
+
+<details>
+<summary><strong>Detalhes técnicos: dados, validações, exclusão e testes</strong></summary>
 
 ### Campos de dados e regras
 
@@ -144,46 +232,43 @@ O CORS na versão Java analisada (`config/WebConfig.java`) declara `GET`, `POST`
 
 Segundo os testes de integração realizados pela equipe, as operações GET, POST e DELETE com a API Java e o banco Oracle foram concluídas com sucesso. Esses testes devem ser reproduzidos com registros controlados quando necessário; simulações de `fetch` não substituem testes reais.
 
-## Estrutura
+</details>
 
-```text
-ultimaquadra-front-gs2-2026/
-├── README.md
-└── my-app/
-    ├── .env.example
-    ├── public/assets/
-    ├── src/
-    │   ├── components/
-    │   ├── data/
-    │   ├── routes/
-    │   ├── services/
-    │   ├── types/
-    │   ├── App.tsx
-    │   └── main.tsx
-    ├── package.json
-    ├── vite.config.ts
-    └── vercel.json
-```
+<details>
+<summary><strong>Origem das sete UBS, referências oficiais e limites dos dados</strong></summary>
 
-## Experiência de consulta
+### Origem das sete UBS reais
+
+Nomes, endereços e CEPs foram conferidos na **Relação dos Estabelecimentos/Serviços da SMS-SP por Subprefeitura — setembro de 2026**, publicada pela Prefeitura de São Paulo. Os identificadores CNES constam da **Portaria SMS nº 609, de 16 de setembro de 2026**:
+
+- Relação municipal (setembro/2026): https://smartsampa.prefeitura.sp.gov.br/documents/d/saude/unid_munic_saude_sub_setembro2026
+- Portaria SMS nº 609/2026 (CNES): https://legislacao.prefeitura.sp.gov.br/portaria-secretaria-municipal-da-saude-sms-609-de-16-de-setembro-de-2026/consolidado
+
+| UBS | Endereço cadastrado | CNES |
+| --- | --- | --- |
+| Bom Retiro — Dr. Octavio Augusto Rodovalho | Rua Tenente Pena, 8 — Bom Retiro | 2029618 |
+| Boracea | Rua Boracea, 270 — Barra Funda | 6048633 |
+| Cambuci | Avenida Lacerda Franco, 791 — Cambuci | 2786834 |
+| Humaitá — Dr. João de Azevedo Lage | Rua Humaitá, 520 — Bela Vista | 2787113 |
+| República — Fernanda Sante Limeira | Rua Líbero Badaró, 282 — Centro | 6090621 |
+| Santa Cecília — Dr. Humberto Pascale | Rua Vitorino Carmilo, 599 — Campos Elíseos | 2752336 |
+| Sé | Rua Frederico Alvarenga, 259 — Sé | 5975220 |
+
+O projeto **não inventa obstáculos em estabelecimentos reais**. As áreas intituladas **“Entorno imediato da UBS — local a indicar”** servem apenas para associar o relato ao entorno do endereço cadastrado. **Não são trechos vistoriados, georreferenciados ou delimitados como partes reais do caminho**. Os identificadores internos dessas áreas foram mantidos para preservar os vínculos dos relatos locais existentes. O formulário exige um **ponto de referência reconhecível**, informado pelo cidadão, enquanto a área não estiver individualizada. A validação mínima exige 15 caracteres e recusa algumas respostas vagas; ela **não verifica geograficamente** a informação fornecida. Trechos futuros somente devem ser individualizados após confirmação de suas referências. Até ocorrer o primeiro relato, as UBS e a página de ocorrências mostram estado vazio.
+
+Os testes realizados com a versão anterior (UBS fictícias) permanecem na chave antiga `ultimaquadra:ocorrencias:v1` do navegador. A versão atual usa `ultimaquadra:ocorrencias:v2` para evitar que relatos antigos sejam associados incorretamente às UBS reais. Esses registros antigos **não são apagados**, mas não aparecem na consulta atual.
+
+</details>
+
+---
+
+## Experiência, responsividade e acessibilidade
 
 A consulta de ocorrências está acessível diretamente na navegação, na Home, na página de UBS, nos detalhes de cada unidade e na confirmação de cadastro. Os filtros são combináveis e ficam registrados na URL (por exemplo, `?unidade=...`), permitindo abrir uma consulta específica. A listagem trata carregamento, erro de rede, ausência total de relatos e ausência de resultados após filtragem como estados diferentes. Os dados são ordenados localmente após a consulta.
 
-## Responsividade e acessibilidade
-
 Projeto adaptado para mobile (390 × 844), tablet (768 × 1024) e desktop (1440 × 900). O menu para telas menores suporta Escape, as rotas têm navegação acessível, os formulários associam `label`/`input`, sinalizam campos inválidos e as mensagens de operação usam regiões de status/alerta. A validação visual final nessas resoluções deve ocorrer com a versão executável no navegador.
 
-## Integrantes
-
-| Integrante | RM | Turma | GitHub |
-| --- | --- | --- | --- |
-| Maria Eduarda Escandor | 568216 | 1TDSPO | [mariabatistaescandor-gif](https://github.com/mariabatistaescandor-gif) |
-| Erick Menezes | 570325 | 1TDSPF | [DevErick-658](https://github.com/DevErick-658) |
-| Maria Eduarda Lopes de Lima | 572425 | 1TDSPO | [mariaeduardaalima](https://github.com/mariaeduardaalima) |
-| Matheus Yudi | 571245 | 1TDSPF | [ogmatheus7](https://github.com/ogmatheus7) |
-| Nicolas Sousa | 574141 | 1TDSPH | [nicolaspk](https://github.com/nicolaspk) |
-
-Os dados e perfis da equipe constam da página `/integrantes`. As fotografias de identificação foram reaproveitadas de materiais acadêmicos anteriores da própria equipe (ECOUP) e estão em `my-app/public/assets/equipe/`.
+---
 
 ## Publicação e entrega
 
@@ -209,6 +294,8 @@ Os dados e perfis da equipe constam da página `/integrantes`. As fotografias de
 - Envio exclusivamente pelo representante no **Portal do Aluno** da disciplina, dentro do prazo oficial.
 - A apresentação presencial é separada do vídeo YouTube e requer participação de todos os integrantes.
 
-## Uso de inteligência artificial
+---
+
+## Transparência sobre o uso de IA
 
 O desenvolvimento do Front-End contou com apoio do ChatGPT na estruturação, explicação, revisão e geração de código. A equipe deve revisar, compreender, testar e documentar as decisões e o uso de IA conforme a exigência acadêmica.
