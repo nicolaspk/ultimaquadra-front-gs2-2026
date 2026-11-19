@@ -13,7 +13,7 @@
 
 > **O caminho também faz parte do cuidado.** O ÚltimaQuadra organiza informações sobre obstáculos físicos nos trajetos de acesso a Unidades Básicas de Saúde, permitindo consultar UBS, registrar ocorrências e acompanhar relatos. O objetivo é dar visibilidade ao trecho que antecede a porta da unidade.
 
-**Navegação:** [Funcionalidades](#funcionalidades) · [Equipe](#equipe) · [Tecnologias](#tecnologias) · [Páginas](#páginas-e-rotas) · [Execução](#como-executar) · [API](#integração-java-e-oracle) · [Entrega](#publicação-e-entrega)
+**Navegação:** [Funcionalidades](#funcionalidades) · [Equipe](#equipe) · [Tecnologias](#tecnologias) · [Páginas](#páginas-e-rotas) · [Execução](#como-executar) · [API](#integração-java-e-oracle) · [Publicação](#publicação) · [Contato](#contato)
 
 ---
 
@@ -25,8 +25,8 @@
 | **Repositório Front-End** | [nicolaspk/ultimaquadra-front-gs2-2026](https://github.com/nicolaspk/ultimaquadra-front-gs2-2026) |
 | **API REST Java** | [ultimaquadra-gs2.onrender.com](https://ultimaquadra-gs2.onrender.com) |
 | **Repositório Back-End** | [nicolaspk/ultimaquadra-gs2](https://github.com/nicolaspk/ultimaquadra-gs2) |
-| **Vídeo no YouTube** | **Pendente de publicação** — até 3 minutos, público ou não listado |
-| **Contato acadêmico** | [GitHub do representante](https://github.com/nicolaspk) · [Equipe e perfis](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes) |
+| **Vídeo no YouTube** | Em preparação — link será adicionado após a publicação |
+| **Contato** | [materiafiap@gmail.com](mailto:materiafiap@gmail.com) |
 
 ---
 
@@ -81,7 +81,7 @@ Cinco integrantes responsáveis pela implementação e integração do ÚltimaQu
   </tr>
 </table>
 
-<sub>As fotografias estão no próprio repositório em <code>my-app/public/assets/equipe/</code> e foram reaproveitadas de materiais acadêmicos anteriores da equipe.</sub>
+<sub>As fotos fazem parte dos arquivos do projeto e também aparecem na página <a href="https://ultimaquadra-front-gs2-2026.vercel.app/integrantes">Integrantes</a>.</sub>
 
 ---
 
@@ -205,7 +205,7 @@ O Java também oferece outros métodos CRUD para unidades, trechos e ocorrência
 
 Em `/ocorrencias/{id}`, o botão **Excluir ocorrência** abre uma confirmação acessível. **Cancelar** não envia nada. Somente após confirmar, o React chama DELETE; em caso de **204**, retorna para `/ocorrencias`, mostra o feedback e carrega novamente a lista por GET. Erros 404, 409, 500 e de rede mantêm a pessoa na confirmação e não declaram exclusão. O envio é protegido contra acionamentos duplicados enquanto a requisição está em andamento.
 
-**Limite de segurança acadêmico:** o CRUD da API foi entregue **sem autenticação/autorização**. Portanto, a exclusão pela interface **não é restrita ao autor do relato**: qualquer pessoa com acesso ao sistema pode solicitar a remoção de qualquer ocorrência. Isso atende à demonstração do CRUD, mas impede considerar a versão pública pronta para produção cidadã sem controles adicionais. Essa limitação deve ser explicitada na apresentação e, se for disponibilizada a usuários reais, resolvida antes da abertura pública. **Não utilize relatos legítimos em testes de exclusão.**
+**Limitação de segurança:** a API não possui autenticação ou autorização para exclusão de ocorrências. Portanto, qualquer pessoa com acesso ao sistema pode solicitar a remoção de qualquer relato. Antes de disponibilizar a solução para uso público real, é necessário implementar controles de acesso. **Não exclua registros legítimos durante os testes.**
 
 ### Como configurar
 
@@ -270,32 +270,23 @@ Projeto adaptado para mobile (390 × 844), tablet (768 × 1024) e desktop (1440 
 
 ---
 
-## Publicação e entrega
+## Publicação
 
-- **Repositório público (Front-End):** https://github.com/nicolaspk/ultimaquadra-front-gs2-2026
-- **Aplicação Vercel:** https://ultimaquadra-front-gs2-2026.vercel.app
-- **API Java remota:** https://ultimaquadra-gs2.onrender.com
-- **Repositório do Java:** https://github.com/nicolaspk/ultimaquadra-gs2
-- **YouTube:** **link pendente** até a publicação do vídeo demonstrativo (público ou não listado, **até 3 minutos**).
-- **Contato:** [perfil do responsável no GitHub](https://github.com/nicolaspk), [perfis profissionais da equipe](https://ultimaquadra-front-gs2-2026.vercel.app/integrantes) na aplicação e página `/contato`. O formulário de contato valida o preenchimento localmente, mas **não envia nem armazena mensagens**.
+O ÚltimaQuadra está disponível na [Vercel](https://ultimaquadra-front-gs2-2026.vercel.app) e utiliza a [API Java](https://ultimaquadra-gs2.onrender.com), conectada ao banco Oracle.
 
 ### Configuração na Vercel
 
-- Repositório: `nicolaspk/ultimaquadra-front-gs2-2026`, branch de produção `main`.
-- Root Directory: `my-app`.
-- Application Preset: Vite; comando de build `npm run build`; saída `dist`.
-- O arquivo `my-app/vercel.json` contém a regra de rewrite para suportar acesso direto às rotas da SPA.
-- A API Java é o modo padrão; variáveis de ambiente são opcionais enquanto forem mantidos os valores do código.
-
-### Entrega acadêmica
-
-- Histórico do GitHub: **mínimo de cinco commits individuais por integrante e quinze no total**, com participação dos cinco integrantes registrada no repositório.
-- Arquivo obrigatório: **um ZIP de até 50 MB**, contendo código-fonte, `README.md`, configurações e assets, **sem `node_modules` ou `dist`**.
-- Envio exclusivamente pelo representante no **Portal do Aluno** da disciplina, dentro do prazo oficial.
-- A apresentação presencial é separada do vídeo YouTube e requer participação de todos os integrantes.
+- **Repositório:** `nicolaspk/ultimaquadra-front-gs2-2026` (branch `main`).
+- **Root Directory:** `my-app`.
+- **Framework:** Vite; comando de build `npm run build`; diretório de saída `dist`.
+- **Rotas SPA:** configuradas em `my-app/vercel.json`.
+- **API:** os valores padrão já apontam para o servidor Java. Variáveis `VITE_DATA_SOURCE` e `VITE_API_URL` são opcionais para personalização do ambiente.
 
 ---
 
-## Transparência sobre o uso de IA
+## Contato
 
-O desenvolvimento do Front-End contou com apoio do ChatGPT na estruturação, explicação, revisão e geração de código. A equipe deve revisar, compreender, testar e documentar as decisões e o uso de IA conforme a exigência acadêmica.
+Para assuntos relacionados ao projeto, escreva para **[materiafiap@gmail.com](mailto:materiafiap@gmail.com)**.
+
+O formulário disponível na rota `/contato` demonstra validação de campos, mas não envia e-mails nem armazena mensagens.
+
